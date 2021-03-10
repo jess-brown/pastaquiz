@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Le Pasta Quiz</title>
+        <script src="https://d3js.org/d3.v6.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Work+Sans">
+        <link rel="icon" 
+        type="image/png" 
+        href="images/cavatappiCursor.png">
+    </head>
+    <body>
+        <div class = "layer1" style = "top:1; left:1; position: absolute; z-index: 2;">
+            <h1>What Pasta are You?</h1>
+            <h4>Find out what pasta you are! The answer will shock you!</h4>
+    
+            <h3 class = "question" class = "q1">Are you an introvert or an extrovert?</h3>
+            <img src="images/q1image.png" width=600pt> 
+            <div>
+                <button class = "q1" value = 0>I'm an introvert!</button>
+                <button class = "q1" value = 3>Extrovert all the way!</button>
+            </div>
+            <div>
+                <button class = "q1" value = 1>Im both!</button>
+                <button class = "q1" value = 2>I don't like labels</button>
+            </div>
+            
+            
+            <h3 class = "question">What's your ideal first date?</h3>
+            <img src="images/q2image.png" width=600pt>
+            <div>
+                <button class = "q2" value = 0>Movie night in</button>
+                <button class = "q2" value = 1>I just go with the flow</button>
+            </div>
+            <div>
+                <button class = "q2" value = 2>Whirlwind trip to paris</button>
+                <button class = "q2" value = 3>Five star restaurant dinner</button>
+    
+            </div>
+            
+            
+            <h3 class = "question">What's your favorite type of color to wear?</h3>
+            <img src="images/q3image.png" width=600pt>
+            <div>
+                <button class = "q3" value = 3>Pastel colors</button>
+                <button class = "q3" value = 2>Bright colors</button>
+            </div>
+            <div>
+                <button class = "q3" value = 1>Dark colors</button>
+                <button class = "q3" value = 0>Neutrals</button>
+    
+            </div>
+            
+            
+            <h3 class = "question"> What's your favorite season?</h3>
+            <img src="images/q4image.png" width=600pt>
+            <div>
+                <button class = "q4" value = 1>Winter</button>
+                <button class = "q4" value = 2>Summer</button>
+            </div>
+            <div>
+                <button class = "q4" value = 0>Spring</button>
+                <button class = "q4" value = 3>Fall</button>
+    
+            </div>
+            
+            
+            <h3 class = "question">You flip on the TV, what are you watching?</h3>
+            <img src="images/q5image.png" width=600pt>
+            <div>
+                <button class = "q5" value = 2>A new indie film</button>
+                <button class = "q5" value = 1>My favorite TV show I've seen 30 times</button>
+            </div>
+            <div>
+                <button class = "q5" value = 0>The Big Bang Theory</button>
+                <button class = "q5" value = 3>The latest Oscar winner</button>
+            </div>
+            
+            
+            <h3 class = "question">Where's your dream vacay spot?</h3>
+            <img src="images/q6image.png" width=600pt>
+            <div>
+                <button class = "q6" value = 3>Bora Bora!</button>
+                <button class = "q6" value = 0>The lake near my house</button>
+            </div>
+            <div>
+                <button class = "q6" value = 1>The Rocky Mountains</button>
+                <button class = "q6" value = 2>The closest beach will do!</button> 
+            </div>
+            
+            
+            <h3 class = "question">What would you say is your best quality?</h3>
+            <img src="images/q7image.png" width=600pt>
+    
+            <div>
+                <button class = "q7" value = 1>I'm as go with the flow as it gets!</button>
+                <button class = "q7" value = 3>I have amazing taste</button>
+            </div>
+            <div>
+                <button class = "q7" value = 0>I'm easy to please</button>
+                <button class = "q7" value = 2>I'm always ready to try new things!</button>
+            </div>
+            
+            
+    
+            <h3 class = "question">What's your beverage of choice?</h3>
+            <img src="images/q8image.png" width=600pt>
+            <div>
+                <button class = "q8" value = 2>Coffee</button>
+                <button class = "q8" value = 0>Soda</button>
+            </div>
+            <div>
+                <button class = "q8" value = 3>Seltzer water</button>
+                <button class = "q8" value = 1>Lemonade</button>
+            </div>
+            
+            
+    
+            <h3 class = "question">You have a day off, how are you spending it?</h3>
+            <img src="images/q9image.png" width=600pt>
+            <div>
+                <button class = "q9" value = 2>On a hike!</button>
+                <button class = "q9" value = 3>I'll be out on the town, brunching and shopping</button>
+            </div>
+            <div>
+                <button class = "q9" value = 0>Catching up on sleep</button>
+                <button class = "q9" value = 1>Getting some work done around the house</button>
+            </div>
+            
+            
+    
+            <h3 class = "question">Do you really want to know what pasta type you are?</h3>
+            <img src="images/q10image.png" width=600pt>
+            <div>
+                <button class = "q10" value = 3>Yes, I've wanted to know my entire life. It's been burning me up inside.</button>
+            </div>
+            <div>
+                <button class = "q10" value = 2>No, I'm your professor and I'm taking this quiz because I have to :(</button>
+            </div>
+            <div>
+                <button class = "q10" id = "lastRow" value = 0 >No, I'm so afraid</button>
+                <button class = "q10" id = "lastRow" value = 1>This literally does not matter to me at all </button>
+            </div>
+    
+            <div id = "finalAnswer">
+                <img class = "finalPicture">
+                <h2 class= "finalTitle"></h3>
+                <p class = "finalParagraph"></p>
+            </div>
+
+            <script src="script.js"></script>
+
+        </div>
+
+        
+
+        
+        
+        
+
+
+        
+
+
+    </body>
+</html>
